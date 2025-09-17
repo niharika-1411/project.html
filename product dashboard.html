@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Product Dashboard </title>
+    <style>
+        h1{
+            background-color: darkcyan;
+            text-align: center;
+            font-weight: bolder;
+        }
+        body{
+            background-color: black;
+        }
+        .dash{
+            background-color: rgb(0, 174, 255);
+            color: aliceblue;
+            height: 75px;
+            font-family: Verdana;
+        }
+        .dash h2{
+            margin-left: 5%;
+            font-weight: bolder;
+            position: relative;
+            top: 15px;
+            font-size: larger;
+        }
+        .dash p{
+            margin-left: 85%;
+            position: absolute;
+            top: 10%;
+            font-size: 20px;
+        }
+        .item{
+            background-color: #2b3b4b;
+            padding: 10px 20px;
+        }
+        .item a{
+            text-decoration: none;
+            color: whitesmoke;
+            right: 0%;
+            font-weight: bold;
+            padding:12px;
+            margin :10px;
+            font-size :20px;
+        }
+        table,td,th{
+            border:2px solid gray;
+            border-collapse: collapse;
+            color: whitesmoke;
+        }
+        table{
+            margin-top: 2%;
+            margin-left: 12%;
+            padding: 10px;
+            width:1200px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Product Dashboard Table </h1>
+    <div class="dash">
+        <h2> IQ DASHBOARD </h2>
+        <p> Virgit Pane ⚙ ⏻ </p>
+    </div>
+    <div class="item">
+        <a href="#" style="border-bottom: 2px solid blue;"> DASHBOARD </a>
+        <a href="#"> USERS </a>
+        <a href="#"> PRIORITY </a>
+        <a href="#"> COLLECTIONS </a>
+        <a href="#"> ARCHIVED </a>
+        <a href="#"> DELETED </a>
+        <a href="#"> TRENDS </a>
+        <a href="#"> TASKS </a>
+        <a href="#"> FILTERS </a>
+        <a href="#"> STATS </a>
+    </div>
+    <table>
+        <tr>
+            <th>  </th>
+            <th> Customer </th>
+            <th> Company </th>
+            <th> Contact </th>
+            <th> Address </th>
+            <th> Revenue </th>
+            <th> VAT </th>
+            <th> Total Price </th>
+            <th> Stats</th>
+        </tr>
+        <tr>
+            <td rowspan="4" style="text-align: center;"> March 2014 </td>
+            <td> IBBP Apps </td>
+            <td> NovaTech Inc. </td>
+            <td> Sarah Johnson </td>
+            <td> 145 Lakeview Ave, Dallas, TX </td>
+            <td> $ 510,000 </td>
+            <td> $ 15,300 </td>
+            <td> $ 525,300 </td>
+            <td> Completed </td>
+        </tr>
+        <tr>
+            <td> SRA - General Contacts </td>
+            <td> Horizon Ltd. </td>
+            <td> Mark Lewis </td>
+            <td> 890 Sunset Blvd, Los Angeles, CA </td>
+            <td> $ 280,000 </td>
+            <td> $ 8,400 </td>
+            <td> $ 288,400 </td>
+            <td> Pending </td>
+        </tr>
+        <tr>
+            <td> CCST </td>
+            <td> Stellar Corp </td>
+            <td> Anita Rao </td>
+            <td> 720 King St, Seattle, WA </td>
+            <td> $ 175,500 </td>
+            <td> $ 5,265 </td>
+            <td> $ 180,765 </td>
+            <td> Completed </td>
+        </tr>
+        <tr>
+            <td> Accupure </td>
+            <td> Orion Systems </td>
+            <td> Kevin Brown </td>
+            <td> 45 Pine Rd, Miami, FL </td>
+            <td> $ 120,000 </td>
+            <td> $ 3,600 </td>
+            <td> $ 123,600 </td>
+            <td> Pending </td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="text-align: center;"> April 2014 </td>
+            <td> IBBP Apps </td>
+            <td> Galaxy Solutions </td>
+            <td> Emma White </td>
+            <td> 402 Maple St, Denver, CO </td>
+            <td> $ 920,000 </td>
+            <td> $ 27,600 </td>
+            <td> $ 947,600 </td>
+            <td> In Progress </td>
+        </tr>
+        <tr>
+            <td> eDiscovery </td>
+            <td> Quantum Ltd. </td>
+            <td> Rajesh Kumar </td>
+            <td> 101 Elm Dr, Houston, TX </td>
+            <td> $ 785,000 </td>
+            <td> $ 23,550 </td>
+            <td> $ 808,550 </td>
+            <td> Completed </td>
+        </tr>
+        <tr>
+            <td> EI Tools </td>
+            <td> Vertex Global </td>
+            <td> Linda Scott </td>
+            <td> 330 Ocean Ave, Miami, FL </td>
+            <td> $ 102,000 </td>
+            <td> $ 3,060 </td>
+            <td> $ 105,060 </td>
+            <td> Pending </td>
+        </tr>
+        <tr>
+            <td> Accupure </td>
+            <td> SkyTech </td>
+            <td> Daniel Green </td>
+            <td> 210 Broadway, New York, NY </td>
+            <td> $ 355,000 </td>
+            <td> $ 10,650 </td>
+            <td> $ 365,650 </td>
+            <td> In Progress </td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="text-align: center;"> May 2014 </td>
+            <td> IBBP Apps </td>
+            <td> Zenith Corp </td>
+            <td> Olivia Brown </td>
+            <td> 25 Lincoln St, San Francisco, CA </td>
+            <td> $ 450,000 </td>
+            <td> $ 13,500 </td>
+            <td> $ 463,500 </td>
+            <td> Completed </td>
+        </tr>
+        <tr>
+            <td> eDiscovery </td>
+            <td> Innovatech </td>
+            <td> Chris Evans </td>
+            <td> 98 Pearl St, Boston, MA </td>
+            <td> $ 198,000 </td>
+            <td> $ 5,940 </td>
+            <td> $ 203,940 </td>
+            <td> Pending </td>
+        </tr>
+        <tr>
+            <td> EI Tools </td>
+            <td> NextGen Ltd </td>
+            <td> Sofia Miller </td>
+            <td> 678 Oak St, Chicago, IL </td>
+            <td> $ 310,000 </td>
+            <td> $ 9,300 </td>
+            <td> $ 319,300 </td>
+            <td> Completed </td>
+        </tr>
+        <tr>
+            <td> Accupure </td>
