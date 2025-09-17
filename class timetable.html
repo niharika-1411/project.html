@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard UI (No Divs)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="h-screen grid grid-rows-[auto,1fr] bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-white border-b">
+    <h1 class="text-xl font-bold">My Dashboard</h1>
+    <nav aria-label="User actions">
+      <ul class="flex gap-2">
+        <li><button class="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg">New</button></li>
+        <li><button class="px-3 py-1.5 text-sm border rounded-lg">Settings</button></li>
+        <li><button class="px-3 py-1.5 text-sm border rounded-lg">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="grid grid-cols-[250px,1fr] h-full overflow-hidden">
+
+    <!-- Sidebar Navigation -->
+    <nav aria-label="Main" class="bg-white border-r p-4 space-y-2">
+      <ul class="space-y-1">
+        <li><button class="w-full text-left px-3 py-2 rounded-lg bg-blue-50 text-blue-700 font-medium">Dashboard</button></li>
+        <li><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100">Reports</button></li>
+        <li><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100">Analytics</button></li>
+        <li><button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100">Users</button></li>
+        <li><button disabled class="w-full text-left px-3 py-2 rounded-lg text-gray-400 cursor-not-allowed">Settings</button></li>
+      </ul>
+    </nav>
+
+    <!-- Content Area -->
+    <section class="flex flex-col overflow-hidden">
+
+      <!-- Filters, Sort, Options -->
+      <section class="flex gap-4 p-4 border-b bg-gray-50 overflow-x-auto">
+
+        <!-- Filters -->
+        <details class="bg-white border rounded-lg p-3 w-64 shrink-0">
+          <summary class="font-medium cursor-pointer">Filters</summary>
+          <form class="mt-2 space-y-2">
+            <fieldset>
+              <legend class="sr-only">Status</legend>
+              <label class="flex items-center gap-2">
+                <input type="checkbox"> Active
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox"> Inactive
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend class="sr-only">Category</legend>
+              <label class="flex items-center gap-2">
+                <input type="checkbox"> Category A
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox"> Category B
+              </label>
+            </fieldset>
+          </form>
+        </details>
+
+        <!-- Sort -->
+        <details class="bg-white border rounded-lg p-3 w-64 shrink-0">
+          <summary class="font-medium cursor-pointer">Sort</summary>
+          <form class="mt-2 space-y-3">
+            <fieldset>
+              <legend class="font-medium text-sm">Field</legend>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="sort-field" checked> Name
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="sort-field"> Date
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend class="font-medium text-sm">Order</legend>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="sort-order" checked> Ascending
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="sort-order"> Descending
+              </label>
+            </fieldset>
+          </form>
+        </details>
+
+        <!-- Options -->
+        <details class="bg-white border rounded-lg p-3 w-64 shrink-0">
+          <summary class="font-medium cursor-pointer">Options</summary>
+          <form class="mt-2 space-y-3">
+            <fieldset>
+              <legend class="font-medium text-sm">Columns</legend>
+              <label class="flex items-center gap-2">
+                <input type="checkbox" checked> Name
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox" checked> Status
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox"> Date
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend class="font-medium text-sm">Density</legend>
+              <input type="range" min="1" max="3" value="2">
+            </fieldset>
+          </form>
+        </details>
+
+      </section>
+
+      <!-- Table -->
+      <section class="flex-1 overflow-auto p-4">
+        <table class="w-full border-collapse bg-white rounded-lg shadow-sm">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-4 py-2 text-left">Name</th>
+              <th class="px-4 py-2 text-left">Status</th>
+              <th class="px-4 py-2 text-left">Date</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y">
+            <tr>
+              <td class="px-4 py-2">Project Alpha</td>
+              <td class="px-4 py-2">Active</td>
+              <td class="px-4 py-2">2025-09-10</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Project Beta</td>
+              <td class="px-4 py-2">Inactive</td>
+              <td class="px-4 py-2">2025-09-08</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Project Gamma</td>
+              <td class="px-4 py-2">Active</td>
+              <td class="px-4 py-2">2025-09-05</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </section>
+  </main>
+</body>
+</html>
