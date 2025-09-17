@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            h1{
+                background-color: bisque;
+                color:blue;
+                text-align: center;
+            }
+            form{
+                 position:absolute;
+                background-color: lightcyan;
+                width:450px;
+                left:35%;
+            }
+            #submit{
+                background-color:lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Course Enrollment From</h1>
+        <form>
+            <fieldset>
+            <legend>Course Enrollment From</legend>
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="rollno">Roll no:</label>
+            <input type="text" id="rollno" name="rollno" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="course">Course Selection:</label>
+            <br> <br>
+            <label for="course">python</label>
+            <input type="checkbox" id="course" name="course" value="python" ><br>
+            <label for="course">Rp</label>
+            <input type="checkbox" id="course" name="course" value="Rp"><br>
+            <label for="course">C++</label>
+            <input type="checkbox" id="course" name="course" value="C++"><br>
+            <label for="course">java</label>
+            <input type="checkbox" id="course" name="course" value="java"><br>
+            <label for="course">DBMS</label>
+            <input type="checkbox" id="course" name="course" value="DBMS"><br>
+            <label for="course">CN</label>
+            <input type="checkbox" id="course" name="course" value="CN"><br><br>
+
+        
+            <label for="mode">Mode:</label>
+            <br> <br>
+            <input type="radio" name="mode" id="mode1" value="online">
+            <label for="mode">Online</label>
+            <input type="radio" name="mode" id="mode" value="offline">
+            <label for="mode">Offline</label>
+            <input type="radio" name="mode" id="mode" value="hybrid">
+            <label for="mode">hybrid</label><br> <br>
+             <input type="submit" value="submit" id="submit">
+            </fieldset>
+        </form>
+    </body>
+</html>
