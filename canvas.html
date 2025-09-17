@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Canvas </title>
+    <style>
+        h1{
+            background-color: aquamarine;
+            color:blue;
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid salmon;
+        }
+    </style>
+</head>
+<body>
+    <h1> CANVAS </h1>
+    <canvas id="myCanvas" width="300" height="300" ></canvas>
+    <canvas id="myCanvas1" width="300" height="300" ></canvas>
+    <canvas id="myCanvas2" width="300" height="300" ></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var a =canvas.getContext("2d");
+        //Draw a rectangle
+        a.fillStyle="blue";
+        a.fillRect(100,100,100,100);
+        //Draw a line
+        a.beginPath();
+        a.moveTo(100,300);
+        a.lineTo(300,100);
+        a.strokeStyle="red";
+        a.stroke();
+        //Draw a cricle
+        var canvas = document.getElementById("myCanvas1");
+        var b =canvas.getContext("2d");
+        b.beginPath();
+        b.arc(95,60,40,0,2*Math.PI);
+        b.strokeStyle="blue";
+        b.stroke();
+        //Draw a Text
+        var canvas = document.getElementById("myCanvas2");
+        var c =canvas.getContext("2d");
+        c.font="30px Arial";
+        c.fillStyle="pink";
+        c.fillText("DS",10,50);
+        c.font="30px Arial";
+        c.strokeStyle="yellow";
+        c.strokeText("PK",10,90);
+    </script>
+</body>
+</html>
